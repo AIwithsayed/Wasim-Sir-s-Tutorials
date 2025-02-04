@@ -62,6 +62,7 @@ const navLinks = document.querySelector('.nav-links');
 
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
+        console.log('Mobile menu button clicked'); // Debug log
         navLinks.classList.toggle('active');
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
@@ -69,6 +70,7 @@ if (mobileMenuBtn) {
     // Close menu when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
+            console.log('Link clicked, closing menu'); // Debug log
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
         });
@@ -77,6 +79,7 @@ if (mobileMenuBtn) {
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+            console.log('Clicked outside menu, closing'); // Debug log
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
         }
