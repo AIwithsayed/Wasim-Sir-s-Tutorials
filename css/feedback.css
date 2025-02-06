@@ -297,4 +297,20 @@ body {
     .feedback-section {
         padding: 50px 0;
     }
+
+    .guide-steps {
+        max-width: 500px;
+        margin: 0 auto 40px;
+    }
+
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
